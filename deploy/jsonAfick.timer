@@ -1,0 +1,11 @@
+[Unit]
+Description=Launches AfickMonitoring to make fresh reports/history
+Requires=jsonAfick.service
+
+[Timer]
+Unit=jsonAfick.service
+OnCalendar=*-*-* *:7:00
+AccuracySec=3h
+
+[Install]
+WantedBy=timers.target

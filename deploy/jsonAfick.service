@@ -1,0 +1,11 @@
+[Unit]
+Description=Afick json reports and history provider
+Wants=jsonAfick.timer
+
+[Service]
+Type=oneshot
+ExecStart=/opt/afickParser/AfickMonitoring /var/log/afick afick_report
+WorkingDirectory=/opt/afickParser/AfickMonitoring
+
+[Install]
+WantedBy=multi-user.target

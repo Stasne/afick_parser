@@ -1,0 +1,1 @@
+./AfickMonitoring /var/log/afick afick_history true
